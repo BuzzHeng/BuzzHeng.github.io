@@ -5,55 +5,98 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yuan Heng Lee | Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2rem;
-      background: #fdfdfd;
-      color: #333;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
+
+    header { background: #222; color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 10; }
+    header nav { display: flex; justify-content: space-between; align-items: center; }
+    header nav a { color: #fff; margin-left: 20px; text-decoration: none; }
+    header nav a:hover { text-decoration: underline; }
+
+    .container { max-width: 1000px; margin: auto; padding: 2rem; }
+
+    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4rem 2rem; background: #fff; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .hero a {
+      background: #0077cc; color: #fff; padding: 0.75rem 1.5rem; border-radius: 5px;
+      text-decoration: none; transition: background 0.3s;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
+    .hero a:hover { background: #005fa3; }
+
+    .projects { margin-top: 3rem; }
+    .projects h2 { margin-bottom: 1.5rem; text-align: center; }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    nav a {
-      margin-right: 15px;
-    }
+    .card h3 { margin-bottom: 0.5rem; }
+    .card p { margin-bottom: 1rem; font-size: 0.95rem; }
+    .card a { color: #0077cc; text-decoration: none; font-weight: bold; }
+    .card a:hover { text-decoration: underline; }
+
     footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+      background: #222; color: #aaa; text-align: center;
+      padding: 1.5rem; margin-top: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Yuan Heng Lee <span style="font-weight: normal;">(Call me Heng)</span></h1>
-    <p>Test Engineer | Automation | AI Enthusiast | Lifelong Learner</p>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="udacity.html">Udacity Journey</a>
-      <a href="https://github.com/BuzzHeng" target="_blank">GitHub</a>
+  <header>
+    <nav class="container">
+      <div><strong>Yuan Heng Lee</strong></div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="udacity.html">Udacity</a>
+        <a href="https://github.com/BuzzHeng" target="_blank">GitHub</a>
+      </div>
     </nav>
   </header>
 
-  <hr>
+  <section class="hero">
+    <h1>Hello, I'm Heng</h1>
+    <p>Test Engineer · Automation · AI Enthusiast · Lifelong Learner</p>
+    <a href="udacity.html">View My Udacity Projects</a>
+  </section>
 
-  <main>
-    <h2>About Me</h2>
-    <p>
-      I'm passionate about technology, automation, and continuous learning.
-      I’ve completed courses from Udacity and built projects in Python, Java, Selenium, and more.
-    </p>
-  </main>
+  <section class="container projects">
+    <h2>Highlighted Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>AI Programming with Python</h3>
+        <p>Worked on neural networks, numpy, pandas, and matplotlib.</p>
+        <a href="https://github.com/BuzzHeng/Udacity-Learning-Journey/tree/main/AI%20Programming%20with%20Python" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>TensorFlow Developer</h3>
+        <p>Image recognition, time series, and NLP using TensorFlow and Keras.</p>
+        <a href="https://github.com/BuzzHeng/Udacity-Learning-Journey/tree/main/TensorFlow%20Developer" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <h3>Selenium Java Automation</h3>
+        <p>Automated test flows with Page Object Model and reusable components.</p>
+        <a href="https://github.com/BuzzHeng/Udemy-Selenium-Java-Automation" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    © 2025 Yuan Heng Lee · <a href="https://github.com/BuzzHeng" target="_blank">GitHub Profile</a>
+    &copy; 2025 Yuan Heng Lee · <a href="https://github.com/BuzzHeng" target="_blank" style="color:#ccc;">GitHub</a>
   </footer>
+
 </body>
 </html>
